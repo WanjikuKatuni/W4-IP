@@ -15,25 +15,30 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-10">
+                
                    <form id="pizza">
                        <!-- size selection -->
-                       <div class="col-md-4">
-                           <label for="pizza-size" class="form-label">Size</label>
-                           <select id="pizza-size" name="pizza-size">
-                               <!-- placeholder for dropdown -->
-                               <option value="" selected disabled hidden>Select size</option>
-                               <!-- dropdown options -->
-                               <option value="500">Small</option>
-                               <option value="800">Medium</option>
-                               <option value="1000">Large</option>
-                               <option value="1200">Mega</option>
-                           </select>
-                           <div id="sizeHelp" class="form-text">The bigger! The better!</div>
+                       <div class="col-sm-4">
+                           <div class="card">
+                            <label for="pizza-size" class="form-label">Size</label>
+                            <select id="pizza-size" name="pizza-size">
+                                <!-- placeholder for dropdown -->
+                                <option value="" selected disabled hidden>Select size</option>
+                                <!-- dropdown options -->
+                                <option value="500">Small</option>
+                                <option value="800">Medium</option>
+                                <option value="1000">Large</option>
+                                <option value="1200">Mega</option>
+                            </select>
+                            <div id="sizeHelp" class="form-text">The bigger! The better!</div>
+                           </div>
                        </div>
+                           
+                       
                        <!-- toppings selection-->
-                       <div class="col-md-4">
-                            <label for="pizza-topping" class="form-label">Toppings</label>
+                       <div class="col-sm-4">
+                            <div class="card">
+                                <label for="pizza-topping" class="form-label">Toppings</label>
                             <select id="pizza-topping" name="pizza-topping">
                                 <!-- placeholder for dropdown -->
                                 <option value="" selected disabled hidden>Select toppings</option>
@@ -44,23 +49,29 @@
                                 <option value="200">Mushrooms</option>
                             </select>
                             <div id="toppingsHelp" class="form-text">The more the merrier!</div>
-                        </div>
+                            </div>
+                       </div>
+                       
+                            
+                        
                        <!-- crust selection -->
-                       <div class="col-md-4">
-                            <label for="pizza-crust" class="form-label">Crust</label>
-                            <select id="pizza-crust" name="pizza-crust">
-                                <!-- placeholder for dropdown -->
-                                <option value="" selected disabled hidden>Select Crust</option>
-                                <!-- dropdown options -->
-                                <option value="0">Super-Thin</option>
-                                <option value="0">Thin</option>
-                                <option value="0">Original</option>
-                                <option value="0">Thick</option>
-                            </select>
-                            <div id="crustHelp" class="form-text">Your wish! Our command!</div>
-                        </div>
+                       <div class="col-sm-4">
+                            <div class="card">
+                                <label for="pizza-crust" class="form-label">Crust</label>
+                                <select id="pizza-crust" name="pizza-crust">
+                                    <!-- placeholder for dropdown -->
+                                    <option value="" selected disabled hidden>Select Crust</option>
+                                    <!-- dropdown options -->
+                                    <option value="0">Super-Thin</option>
+                                    <option value="0">Thin</option>
+                                    <option value="0">Original</option>
+                                    <option value="0">Thick</option>
+                                </select>
+                                <div id="crustHelp" class="form-text">Your wish! Our command!</div>
+                            </div>
+                       </div>
                    </form>
-                </div>
+  
             </div>
         </div>
 

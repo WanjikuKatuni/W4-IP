@@ -22,6 +22,7 @@ $(document).ready(function () {
      $(".order-table").show()
      $("button#place").hide()
      $("button#order-again").hide()
+     $("button#restart").show()
 
     var selectedPizzaSize = $("#pizza-size option:selected").val();
     var sizeName = $("#pizza-size option:selected").text();
@@ -92,13 +93,15 @@ $(document).ready(function () {
   $("button#finish-order").click(function(){
       $("#amount").show()
       $("button#order-again").hide()
-      $(".order-table").hide()
+      $(".pizzatable").hide()
       $("button#place").hide()
       $("button#add-order").hide()
+      $("button#finish-order").hide()
       $("#dtotal").show()
       $("#totalamount").hide()
       $("form#location").hide()
       $("#pay").show()
+      $("button#restart").show()
       
       $(".grand-total").text(grandTotal);
   })
@@ -130,12 +133,16 @@ $(document).ready(function () {
     $("#delivery-switch").hide()
     $("#totalamount").show()
     $("form#location").hide()
-    $("button#place").show()
+    $("button#place").hide()
     $("#pay").show()
 
     
     
   })
+//to reload page once done
+  $("button#restart").click(function(){
+    location.reload();
+})
  
 })
 

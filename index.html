@@ -136,11 +136,7 @@
                             <br>
                             <button class="btn btn-info" id="finish-order" type="submit">Finish Order</button>
                         </div>
-                        <!-- order again button -->
-                        <div>
-                            <br>
-                            <button class="btn btn-info" id="order-again" type="submit">Order again?</button>
-                        </div>
+                        
                     </div>
                 
                 
@@ -150,14 +146,21 @@
                     <br>
                     <div class="card">
                         <div class="theamount">
-                            <p id="totalamount">The total is:<span class="grand-total"></span> </p>
+                            <p id="totalamount">The total plus delivery to <span class="the-location"></span> is:<span class="grand-total"></span> </p>
                             <p id="dtotal">The total plus delivery is: <span class="delivery-total"></span></p>
                             <p>Pay to Till Number: 123456 </p>
                             <!-- delivery column -->
-                            <div class="form-check form-switch">
+                            <div class="form-check form-switch" id="delivery-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" id="delivery">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Deliver to your doorstep for an additional 200?</label>
                             </div>
+                            <form id="location">
+                                <div class="form-group">
+                                    
+                                    <input type="text" class="form-control" id="new-location" placeholder="delivery location ....">
+                                </div>
+                                <button type="submit" class="btn" id="submitLocation">Add delivery location</button>
+                            </form>
                            
                             
                         </div>

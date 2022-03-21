@@ -96,6 +96,7 @@ $(document).ready(function () {
       $("button#place").hide()
       $("button#add-order").hide()
       $("#dtotal").hide()
+      $("form#location").hide()
       
       $(".grand-total").text(grandTotal);
   })
@@ -103,10 +104,32 @@ $(document).ready(function () {
   $("#delivery").click (function(){
     
       $("#totalamount").hide()
-      $("#dtotal").show()
+      $("form#location").show()
+      
 
-      grandTotal=grandTotal+deliver
-      $(".delivery-total").text(grandTotal);
+   
   })
+
+  $("form#location").submit(function(event){
+      //prevent default action
+    event.preventDefault();
+
+
+    var inputtednewLocation = $("input#new-location").val();
+    $(".the-location").text(inputtednewLocation)
+    grandTotal=grandTotal+deliver
+    $(".delivery-total").text(grandTotal);
+
+
+    $("#dtotal").hide()
+    $("#delivery-switch").hide()
+    $("#totalamount").show()
+    $("form#location").hide()
+    $("button#place").show()
+
+    
+    
+  })
+ 
 })
 

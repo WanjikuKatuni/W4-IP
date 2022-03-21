@@ -6,8 +6,6 @@ function pizzaOrder(size, crust, toppings, total) {
   this.total = total;
 }
 
-
-
 $(document).ready(function () {
   // hide table
   // $(".order-table").hide()
@@ -17,8 +15,6 @@ $(document).ready(function () {
   $("form#place-order").submit(function (event) {
     //prevent default action
     event.preventDefault();
-
-   
 
     // // show table after clicking placec order
     //  $(".order-table").show()
@@ -31,9 +27,9 @@ $(document).ready(function () {
 
     var selectedPizzaTopping = $("#pizza-topping option:selected").val();
     var topName = $("#pizza-topping option:selected").text();
-    
-    var total = selectedPizzaSize + selectedPizzaCrust + selectedPizzaTopping
-    
+
+    var total = parseInt(selectedPizzaSize) + parseInt(selectedPizzaCrust) + parseInt(selectedPizzaTopping);
+
     // $("order-table").show()
 
     var newPizzaOrder = new pizzaOrder(
@@ -42,22 +38,25 @@ $(document).ready(function () {
       selectedPizzaTopping,
       total
     );
-    
-    $("td.size").append(sizeName +" " + newPizzaOrder.size);
-    $("td.crust").append(crustName +" " + newPizzaOrder.crust);
-    $("td.top").append(topName +" "+ newPizzaOrder.toppings);
-    $("td.total").append(newPizzaOrder.total);
+
+    // insert new row
+    var newRow = '<tr><td>' + sizeName + " " + newPizzaOrder.size + '</td><td>' + crustName + " " + newPizzaOrder.crust+ '</td><td>' + topName + " " + newPizzaOrder.toppings + '</td><td>' + newPizzaOrder.total + '</td></tr>'
+
+      $("#pizzatable").append(newRow);
+
+    // $("td.size").append(sizeName + " " + newPizzaOrder.size);
+    // $("td.crust").append(crustName + " " + newPizzaOrder.crust);
+    // $("td.top").append(topName + " " + newPizzaOrder.toppings);
+    // $("td.total").append(newPizzaOrder.total);
 
     // $("button#place-order")
     // // .last()
     // .click(function () {
     //   $(".order-table").show();
-    $(".size").html($("#pizza-size:selected").text(newOrderDetails.pizzaSize));
-    $(".crust").html(
-      $("pizza-crust:selected").text(newOrderDetails.pizzaCrust)
-    );
-    $(".top").text(
-      $("pizza-topping:selected").text(newOrderDetails.pizzaToppings)
-    );
+    // $(".size").html($("#pizza-size:selected").text(newOrderDetails.pizzaSize));
+    // $(".crust").html($("pizza-crust:selected").text(newOrderDetails.pizzaCrust));
+    // $(".top").text($("pizza-topping:selected").text(newOrderDetails.pizzaToppings) );
+
+
   });
 });

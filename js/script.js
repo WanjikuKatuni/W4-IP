@@ -27,9 +27,8 @@ $(document).ready(function () {
     var selectedPizzaCrust = $("#pizza-crust option:selected").val();
     var selectedPizzaTopping = $("#pizza-topping option:selected").val();
     
-    console.log(selectedPizzaCrust);
-    console.log(selectedPizzaSize);
-    console.log(selectedPizzaTopping);
+    var total = selectedPizzaSize + selectedPizzaCrust + selectedPizzaTopping
+    
     // $("order-table").show()
 
     var newOrderDetails = new pizzaOrder(

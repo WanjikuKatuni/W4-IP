@@ -24,21 +24,29 @@ $(document).ready(function () {
     //  $(".order-table").show()
 
     var selectedPizzaSize = $("#pizza-size option:selected").val();
+    var sizeName = $("#pizza-size option:selected").text();
+
     var selectedPizzaCrust = $("#pizza-crust option:selected").val();
+    var crustName = $("#pizza-crust option:selected").text();
+
     var selectedPizzaTopping = $("#pizza-topping option:selected").val();
+    var topName = $("#pizza-topping option:selected").text();
     
     var total = selectedPizzaSize + selectedPizzaCrust + selectedPizzaTopping
     
     // $("order-table").show()
 
-    var newOrderDetails = new pizzaOrder(
+    var newPizzaOrder = new pizzaOrder(
       selectedPizzaSize,
       selectedPizzaCrust,
-      selectedPizzaTopping
+      selectedPizzaTopping,
+      total
     );
-    $("td.size").append(newOrderDetails.pizzaSize);
-    $("td.crust").append(newOrderDetails.pizzaCrust);
-    $("td.top").append(newOrderDetails.pizzaToppings);
+    
+    $("td.size").append(sizeName +" " + newPizzaOrder.size);
+    $("td.crust").append(crustName +" " + newPizzaOrder.crust);
+    $("td.top").append(topName +" "+ newPizzaOrder.toppings);
+    $("td.total").append(newPizzaOrder.total);
 
     // $("button#place-order")
     // // .last()

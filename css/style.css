@@ -7,24 +7,27 @@ table, th, td {
 .card:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
    }
+
 .card {
     background-color: #e2c9be;
     background-image: linear-gradient(315deg, #e2c9be 0%, #fbf7e9 74%);
-
+    
+    
+   
 }
 
 
   
 #jumbo2{
-    background-color: #e2c9be;
-    background-image: linear-gradient(315deg, #e2c9be 0%, #fbf7e9 74%);
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d8896b 74%);
 
     
-
 }
 button {
-    background-color: #e8c99b;
-    background-image: linear-gradient(315deg, #e8c99b 0%, #e8bc85 74%);
+    background-color: #efecec;
+    background-image: linear-gradient(315deg, #efecec 0%, #f9aba4 74%);
+    
     margin-left: 25%;
     margin-right: 25%;
     width:50%;
@@ -34,10 +37,11 @@ button {
     
     background-color: #e2c9be;
     background-image: linear-gradient(315deg, #e2c9be 0%, #fbf7e9 74%);
+
+    
     
 
 }
 
-.order-details{
-    display: none;
-}
+
+

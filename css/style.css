@@ -18,7 +18,9 @@ table, th, td {
 
 }
 button {
-    background-color: #772f1a;
-    background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
-
+    background-color: #e8c99b;
+    background-image: linear-gradient(315deg, #e8c99b 0%, #e8bc85 74%);
+    margin-left: 25%;
+    margin-right: 25%;
+    width:50%;
 }

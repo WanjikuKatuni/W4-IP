@@ -1,11 +1,12 @@
 $(document).ready(function(){
     // hide table
-    $("#table1").hide()
+    $(".order-table").hide()
     $(".amount").hide()
     $(".order-again").hide()
     
     //show table after placing order 
-    $("button#place-order").click(function(){
-        $("#table1").show()
+    $("form#place-order").submit(function(event){
+        event.preventDefault()
     })
+    
 })

@@ -8,7 +8,7 @@ function pizzaOrder(size, crust, toppings, total) {
 
 $(document).ready(function () {
   // hide table
-  // $(".order-table").hide()
+  $(".order-table").hide()
   // $(".amount").hide()
   // $(".order-again").hide()
 
@@ -17,7 +17,8 @@ $(document).ready(function () {
     event.preventDefault();
 
     // // show table after clicking placec order
-    //  $(".order-table").show()
+     $(".order-table").show()
+     $("button#place").hide()
 
     var selectedPizzaSize = $("#pizza-size option:selected").val();
     var sizeName = $("#pizza-size option:selected").text();
@@ -44,19 +45,7 @@ $(document).ready(function () {
 
       $("#pizzatable").append(newRow);
 
-    // $("td.size").append(sizeName + " " + newPizzaOrder.size);
-    // $("td.crust").append(crustName + " " + newPizzaOrder.crust);
-    // $("td.top").append(topName + " " + newPizzaOrder.toppings);
-    // $("td.total").append(newPizzaOrder.total);
-
-    // $("button#place-order")
-    // // .last()
-    // .click(function () {
-    //   $(".order-table").show();
-    // $(".size").html($("#pizza-size:selected").text(newOrderDetails.pizzaSize));
-    // $(".crust").html($("pizza-crust:selected").text(newOrderDetails.pizzaCrust));
-    // $(".top").text($("pizza-topping:selected").text(newOrderDetails.pizzaToppings) );
-
+    
 
   });
 });

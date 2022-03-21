@@ -1,6 +1,6 @@
 # Ayz Pizzeria
 This is a web application for Ayz Pizzeria. It enables users to be able to order Pizza from Ayz Pizzeria.
-[![image](https://github.com/WanjikuKatuni/W4-IP/blob/master/images/p.screen.png?raw=true)]
+![alt text](https://github.com/WanjikuKatuni/W4-IP/blob/master/pscreen.jpg?raw=true)
 ## Technologies Used
 - HTML & CSS (Bootstrap)
 - Javascript & Jquery

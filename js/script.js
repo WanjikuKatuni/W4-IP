@@ -9,7 +9,7 @@ function pizzaOrder(size, crust, toppings, total) {
 $(document).ready(function () {
   // hide table
   $(".order-table").hide()
-  // $(".amount").hide()
+  $("#amount").hide()
   // $(".order-again").hide()
 
   $("form#place-order").submit(function (event) {
@@ -48,4 +48,43 @@ $(document).ready(function () {
     
 
   });
-});
+
+  $("button#add-order").click(function(){
+      
+
+      var selectedPizzaSize = $("#pizza-size option:selected").val();
+      var sizeName = $("#pizza-size option:selected").text();
+  
+      var selectedPizzaCrust = $("#pizza-crust option:selected").val();
+      var crustName = $("#pizza-crust option:selected").text();
+  
+      var selectedPizzaTopping = $("#pizza-topping option:selected").val();
+      var topName = $("#pizza-topping option:selected").text();
+  
+      var total = parseInt(selectedPizzaSize) + parseInt(selectedPizzaCrust) + parseInt(selectedPizzaTopping);
+  
+      // $("order-table").show()
+  
+      var newPizzaOrder = new pizzaOrder(
+        selectedPizzaSize,
+        selectedPizzaCrust,
+        selectedPizzaTopping,
+        total
+      );
+  
+      // insert new row
+      var newRow = '<tr><td>' + sizeName + " " + newPizzaOrder.size + '</td><td>' + crustName + " " + newPizzaOrder.crust+ '</td><td>' + topName + " " + newPizzaOrder.toppings + '</td><td>' + newPizzaOrder.total + '</td></tr>'
+  
+        $("#pizzatable").append(newRow);
+  
+  })
+
+  $("button#finish-order").click(function(){
+      $("#amount").show()
+      $(".order-table").hide()
+      $("button#place").hide()
+      $("button#add-order").hide()
+      
+  })
+})
+

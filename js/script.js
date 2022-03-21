@@ -6,6 +6,7 @@ function pizzaOrder(size, crust, toppings, total) {
   this.total = total;
 }
 var grandTotal=0;
+var deliver=200
 
 $(document).ready(function () {
   // hide table
@@ -34,6 +35,7 @@ $(document).ready(function () {
     var total = parseInt(selectedPizzaSize) + parseInt(selectedPizzaCrust) + parseInt(selectedPizzaTopping);
     
     grandTotal=grandTotal+total;
+    
 
     // $("order-table").show()
 
@@ -67,6 +69,8 @@ $(document).ready(function () {
   
       var total = parseInt(selectedPizzaSize) + parseInt(selectedPizzaCrust) + parseInt(selectedPizzaTopping);
       grandTotal=grandTotal+total;
+     
+
       // $("order-table").show()
   
       var newPizzaOrder = new pizzaOrder(
@@ -90,9 +94,19 @@ $(document).ready(function () {
       $("button#order-again").hide()
       $(".order-table").hide()
       $("button#place").hide()
-      $("buttonadd-order").hide()
+      $("button#add-order").hide()
+      $("#dtotal").hide()
       
       $(".grand-total").text(grandTotal);
+  })
+
+  $("#delivery").click (function(){
+    
+      $("#totalamount").hide()
+      $("#dtotal").show()
+
+      grandTotal=grandTotal+deliver
+      $(".delivery-total").text(grandTotal);
   })
 })
 

@@ -95,8 +95,10 @@ $(document).ready(function () {
       $(".order-table").hide()
       $("button#place").hide()
       $("button#add-order").hide()
-      $("#dtotal").hide()
+      $("#dtotal").show()
+      $("#totalamount").hide()
       $("form#location").hide()
+      $("#pay").show()
       
       $(".grand-total").text(grandTotal);
   })
@@ -105,7 +107,10 @@ $(document).ready(function () {
     
       $("#totalamount").hide()
       $("form#location").show()
-      
+      $("#delivery").hide()
+      $("#deliveryHelp").hide()
+      $("#pay").hide()
+      $("#dtotal").hide()
 
    
   })
@@ -126,6 +131,7 @@ $(document).ready(function () {
     $("#totalamount").show()
     $("form#location").hide()
     $("button#place").show()
+    $("#pay").show()
 
     
     
